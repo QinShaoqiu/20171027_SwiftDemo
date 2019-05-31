@@ -11,14 +11,15 @@
 @implementation OCDataModel
 
 - (instancetype)initWithName:(NSString *)name age:(int)age height:(double)height{
+    
     if (self = [super init]) {
         self.stuName = name;
         self.stuAge = age;
         self.stuHeight = height;
     }
+    
     return self;
 }
-
 
 - (void)changeStuname:(NSString *)newName{
     self.stuName = newName;

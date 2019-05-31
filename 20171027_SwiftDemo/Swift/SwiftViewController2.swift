@@ -17,7 +17,7 @@ class SwiftViewController2: UIViewController {
         self.view.backgroundColor = UIColor.white;
         
         // UI 相关
-        //返回
+        // 返回
         backBtn = UIButton(type: .system);
         backBtn!.frame = CGRect(x: 20, y: 64, width: 70, height:50);
         backBtn!.backgroundColor = UIColor.blue;
@@ -27,16 +27,16 @@ class SwiftViewController2: UIViewController {
         backBtn!.addTarget(self, action:#selector(backBtnClick), for:.touchUpInside)
         
         numTF1 = UITextField(frame: CGRect(x: 20, y:  backBtn!.frame.origin.y + backBtn!.frame.size.height + 20, width: 200, height: 50));
-        numTF1!.keyboardType = UIKeyboardType.numberPad      //键盘
+        numTF1!.keyboardType = UIKeyboardType.numberPad      // 键盘
         numTF1!.placeholder = ""
-        numTF1!.clearButtonMode = .whileEditing              //编辑时出现清除按钮
-        numTF1!.adjustsFontSizeToFitWidth = true             //当文字超出文本框宽度时，自动调整文字大小
-        numTF1!.minimumFontSize = 14                         //最小可缩小的字号
-        numTF1!.borderStyle = UITextBorderStyle.roundedRect  //设置边框样式为圆角矩形
-        numTF1!.layer.masksToBounds = true                   //修改圆角半径的话需要将masksToBounds设为true
-        numTF1!.layer.cornerRadius = 12.0                    //圆角半径
-        numTF1!.layer.borderWidth = 2.0                      //边框粗细
-        numTF1!.layer.borderColor = UIColor.red.cgColor      //边框颜色
+        numTF1!.clearButtonMode = .whileEditing              // 编辑时出现清除按钮
+        numTF1!.adjustsFontSizeToFitWidth = true             // 当文字超出文本框宽度时，自动调整文字大小
+        numTF1!.minimumFontSize = 14                         // 最小可缩小的字号
+        numTF1!.borderStyle = UITextBorderStyle.roundedRect  // 设置边框样式为圆角矩形
+        numTF1!.layer.masksToBounds = true                   // 修改圆角半径的话需要将masksToBounds设为true
+        numTF1!.layer.cornerRadius = 12.0                    // 圆角半径
+        numTF1!.layer.borderWidth = 2.0                      // 边框粗细
+        numTF1!.layer.borderColor = UIColor.red.cgColor      // 边框颜色
         numTF1?.text = "0";
         self.view.addSubview(numTF1!);
         
@@ -50,17 +50,17 @@ class SwiftViewController2: UIViewController {
          5.字符:      Character
          */
         
-        //switf定义变量或常量时，可以不指定数据类型
+        // switf定义变量或常量时，可以不指定数据类型
         
-        //变量:值能被修改,var 修饰
+        // 变量:值能被修改,var 修饰
         var doubleValue1:Double = 20;
         doubleValue1 = 10;
         
-        //常量:值不能被修改,let 修饰
+        // 常量:值不能被修改,let 修饰
         let intValue1:Int = 30 ;
         print("doubleValue1 = ",doubleValue1,"intValue1 = %d",intValue1,"\n");
         
-        //不指定类型的话，系统会会自动推导声明的变量或常量的数据类型
+        // 不指定类型的话，系统会会自动推导声明的变量或常量的数据类型
         let testStr = "testStr";
         let intValue2 = 10;
         print("testStr == ",testStr,"intValue2 == ",intValue2,"\n");
@@ -76,10 +76,10 @@ class SwiftViewController2: UIViewController {
         let intValue6:Int = intValue4 + intValue5;
         print(intValue4,"+",intValue5,"==",intValue6,"\n");
         
-        //任何情况下都不会做隐式转化，必须以相同类型进行计算
+        // 任何情况下都不会做隐式转化，必须以相同类型进行计算
         let testNum1:Int = 2;
         let testNum2:Double = 0.5;
-        let testNum3 = Double(testNum1) / testNum2;        //必须要显式类型的转化
+        let testNum3 = Double(testNum1) / testNum2;        // 必须要显式类型的转化
         print(testNum1,"/",testNum2,"==",testNum3,"\n");
         
         
@@ -120,7 +120,9 @@ class SwiftViewController2: UIViewController {
         
         // 创建一个类
         class guardTest{
+            
             func guardTestFunction(){
+                
                 let myNickName: String? = "shaoqinggexia"
                 let myAge: Int? = 22
                 
@@ -128,10 +130,11 @@ class SwiftViewController2: UIViewController {
                     print("myNickName myAge is nil")
                     return
                 }
+                
                 print("guard let:  myNickName ", nick,"  myAge  ", String(age))
             }
-            
         }
+        
         let guardTestObject = guardTest();
         guardTestObject.guardTestFunction();
         
@@ -185,7 +188,7 @@ class SwiftViewController2: UIViewController {
             print("case 2");
             
         case 3:
-            break;  //相当于有一行代码
+            break;  // 相当于有一行代码
             
         default:
             print("other");
@@ -217,7 +220,7 @@ class SwiftViewController2: UIViewController {
             print("步长循环 递减 0..<12   ",i)
         }
         
-        //反序循环
+        // 反序循环
         print("\n");
         let range = 0...5
         for i in range.reversed(){
@@ -234,7 +237,7 @@ class SwiftViewController2: UIViewController {
         }
         
         /***************************epeat-while循环*************************/
-        //它和 while 的区别是在判断循环条件之前，先执行一次循环的代码块。然后重复循环直到条件为 false
+        // 它和 while 的区别是在判断循环条件之前，先执行一次循环的代码块。然后重复循环直到条件为 false
         print("\n");
         var m = 200
         repeat {
@@ -263,7 +266,6 @@ class SwiftViewController2: UIViewController {
             print(testStr5," ch = ",ch)
         }
         
-        
         // 字符串拼接
         print("\n");
         let name:String? = "老王"
@@ -290,23 +292,22 @@ class SwiftViewController2: UIViewController {
          **********************************************************************/
         print("\n");
         
-        //截取字符串(a,b)
+        // 截取字符串(a,b)
         let testStr6 = (testStr5 as NSString).substring(with: NSMakeRange(2, 5))
         print(testStr5,"(2, 5)  testStr6 = ",testStr6);
 
-        //截取字符串(index,~)
+        // 截取字符串(index,~)
         let index = testStr5.index(testStr5.startIndex, offsetBy: 3)
         let testStr7 = String(testStr5[index...])
         print(testStr5,"from 3  testStr7 = ",testStr7);
         
-        //截取字符串(0,index)
+        // 截取字符串(0,index)
         let testStr8 = String(testStr5[..<index])
         print(testStr5,"0 to: 3  testStr9 = ",testStr8);
         
-        //截取字符串,从某个string开始
+        // 截取字符串,从某个string开始
         let testStr9 = String(testStr5["wo".endIndex...])
         print(testStr5,"from: wo  testStr9 = ",testStr9);
-        
         
         // String 使用 Range
         let myRange = testStr5.startIndex..<testStr5.index(testStr5.startIndex, offsetBy: 5)
@@ -332,11 +333,11 @@ class SwiftViewController2: UIViewController {
         let (a,b) = student
         print("student a = ",a," b = ",b)
         
-        //如果仅需要元组中的个别的值，可以使用"_"的方式来处理不需要的值
+        // 如果仅需要元组中的个别的值，可以使用"_"的方式来处理不需要的值
         let (c,_) = student
         print("student c = ",c)
         
-        //通过序号获得元组的值
+        // 通过序号获得元组的值
         print("student is", student.0, student.1)
         
         // 可以修改
@@ -347,12 +348,11 @@ class SwiftViewController2: UIViewController {
         print("message.status ",message.status," message.msg",message.msg)
         
         
-        
         /***************************数组定义*************************/
         print("\n");
         print("************数组定义************")
         
-        //方括号 [] 来创建数组
+        // 方括号 [] 来创建数组
         let array1 = ["11","22","33","33"]
         print("array1 = ", array1)
         
@@ -361,27 +361,27 @@ class SwiftViewController2: UIViewController {
         
         // 定义一个数组（没有初始化）
         var array3:[Int]
-        array3 = [Int]()    //初始化
+        array3 = [Int]()    // 初始化
         array3.append(100);
         print("array3 = ", array3)
         
-        //声明空数组,（必须初始化
+        // 声明空数组,（必须初始化
         var array4 = [String]()
         array4.append("200");
         print("array4 = ", array4)
         
-        //数组装入不同类型数据
+        // 数组装入不同类型数据
         let array5:[Any] = ["zhangsan","lisi",20]
         print("array5 = ", array5)
         
-        //初始化1个长度固定的数组
+        // 初始化1个长度固定的数组
         let array6 = [Double](repeating: 0.0, count: 3) //[0.0, 0.0, 0.0]
         print("array6 = ", array6)
         
         let array7 = Array(repeating: 3.0, count: 3)  //[3.0, 3.0, 3.0]
         print("array7 = ", array7)
         
-        //数组的count
+        // 数组的count
         let array8: [String] = ["Alex", "Brian", "Dave"]
         print("array8.count ",array8.count,"array8 = ",array8)
         
@@ -448,6 +448,7 @@ class SwiftViewController2: UIViewController {
         print("array10 删除全部并保留空间,数组容量  = ",array10.capacity)
         print("array10 = ",array10)
         
+        
         /***************************容量*************************/
         print("\n");
         var array11 = [1,2,3,4,5,6,7,8,9,0]
@@ -462,7 +463,6 @@ class SwiftViewController2: UIViewController {
             array11.append(i)
             print("array11 容量 ",array11.capacity)
         }
-        
         
         
         /***************************数组定义*************************/
@@ -483,7 +483,7 @@ class SwiftViewController2: UIViewController {
         
         /***************************字典增删改*************************/
         print("\n");
-        //方括号 [] 来创建字典
+        // 方括号 [] 来创建字典
         let testDict？ = ["name":"lisi","age":"18"];
         print("testDict = ",testDict？);
         
@@ -536,22 +536,20 @@ class SwiftViewController2: UIViewController {
         
     }
     
-    
-    //隐藏系统导航栏
+    // 隐藏系统导航栏
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true);
         //self.navigationController?.navigationBar.isHidden = true;
     }
     
-    //点击空白，隐藏键盘
+    // 点击空白，隐藏键盘
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         numTF1?.resignFirstResponder()
     }
     
-    //返回
+    // 返回
     @objc func backBtnClick(){
         numTF1?.resignFirstResponder()
         self.navigationController?.popViewController(animated: true);
     }
-
 }

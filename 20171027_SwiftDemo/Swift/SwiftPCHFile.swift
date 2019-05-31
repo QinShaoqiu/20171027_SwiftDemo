@@ -24,7 +24,7 @@ public let uniqueString = ProcessInfo.processInfo.globallyUniqueString
 public let cachesPath: String = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
 public let userDefault = UserDefaults.standard
 
-//UserDefaults存储数据
+// UserDefaults存储数据
 func save_userDefaults(key : String,value:AnyObject?){
     userDefault.set(value!, forKey:key)
 }
@@ -49,7 +49,7 @@ public let kBarTintColor: UIColor = kRGBA(r: 55, g: 186, b: 89, a: 1)
 public let notice = NotificationCenter.default
 
 
-//根据键盘监控  获取键盘高度
+// 根据键盘监控  获取键盘高度
 func getKeyBoardHeight(aNotification : NSNotification)->CGFloat{
     let uInfo   = aNotification.userInfo as NSDictionary?
     let avalue = uInfo!["UIKeyboardFrameEndUserInfoKey"] as! NSValue
@@ -59,7 +59,7 @@ func getKeyBoardHeight(aNotification : NSNotification)->CGFloat{
 }
 
 
-//字符串转数组
+// 字符串转数组
 func stringToArray(str:String)->NSArray{
     var dataArray:[String] = []
     for items in str{
@@ -86,8 +86,8 @@ func kRegisterNib(nibName:String)-> UINib
 }
 
 
-//View
-//RGBA函数
+// View
+// RGBA函数
 func kRGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor
 {
     return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
@@ -136,7 +136,7 @@ func kViewYH (v:UIView) -> CGFloat
 }
 
 
-//调试相关
+// 调试相关
 // MARK: - 快速打印代码执行时间
 /*
  *TICK
@@ -150,8 +150,8 @@ let TOCK: () = print("Time:\(-TICK.timeIntervalSinceNow)")
 class SwiftDataModel: NSObject {
     var stuName: String?
     var stuAge: Int = 0
-    var stuHeight: Double = 0  //默认是0
-    let totalScore: Int   //在Swift中let声明的值是不变量，无法被写入赋值
+    var stuHeight: Double = 0  // 默认是0
+    let totalScore: Int   // 在Swift中let声明的值是不变量，无法被写入赋值
     
     required init(name: String, age: Int, height: Double, score: Int ) {
         stuName = name;

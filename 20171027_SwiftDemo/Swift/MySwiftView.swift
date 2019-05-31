@@ -9,10 +9,10 @@
 import UIKit
 
 class MySwiftView: UIView {
-    //1 声明变量
+    // 1 声明变量
     var myImageView: UIImageView?
     
-    //2 初始化视图
+    // 2 初始化视图
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white;
@@ -21,7 +21,7 @@ class MySwiftView: UIView {
         self.addSubview(myImageView!)
     }
     
-    //3 增加设置图片方法
+    // 3 增加设置图片方法
     func addImage(image: UIImage) {
         myImageView?.image = image
     }
@@ -29,6 +29,4 @@ class MySwiftView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
 }

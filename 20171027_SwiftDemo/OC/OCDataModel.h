@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface OCDataModel : NSObject
+
 @property (nonatomic, copy) NSString *stuName;
 @property (nonatomic, assign) int stuAge;
 @property (nonatomic, assign) double stuHeight;
 
 - (instancetype)initWithName:(NSString *)name age:(int)age height:(double)height;
 - (void)changeStuname:(NSString *)newName;
+
 @end
