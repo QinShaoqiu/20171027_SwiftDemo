@@ -19,7 +19,20 @@ class MySwiftView: UIView {
         myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         myImageView?.backgroundColor = UIColor.cyan
         self.addSubview(myImageView!)
+        
+        //接受通知监听
+        self.addObserver()
+              
     }
+    
+    func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification(noti:)), name: NSNotification.Name(rawValue: QSQ_SuccessNotification), object: nil)
+    }
+        
+    @objc func receiveNotification(noti: Notification) {
+        print("收到通知啦");
+    }
+    
     
     // 3 增加设置图片方法
     func addImage(image: UIImage) {

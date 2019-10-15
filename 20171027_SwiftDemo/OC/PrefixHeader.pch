@@ -19,7 +19,7 @@
 #define PrefixHeader_pch
 
 //尺寸
-#define NavHeight                           (isPhoneX ? 88 : 64)
+#define NavHeight                           (isPhoneXX ? 88 : 64)
 #define KWidth                              [UIScreen mainScreen].bounds.size.width
 #define KHeight                             [UIScreen mainScreen].bounds.size.height
 #define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
@@ -47,7 +47,34 @@
 #define isPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
 #define isPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640,960), [[UIScreen mainScreen] currentMode].size) : NO)
 
+
 #define isPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPhoneXr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPhoneXs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define isPhoneXs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define isPhoneXX (isPhoneX || isPhoneXr || isPhoneXs||isPhoneXs_Max)
+
+
+
+
+// 字体
+#define kFontSystem(x)                         [UIFont systemFontOfSize:x]
+#define kFontLight(x)                          [UIFont fontWithName:@"PingFangSC-Light" size:x]       // 苹方-简 细体
+#define kFontUltralight(x)                     [UIFont fontWithName:@"PingFangSC-Ultralight" size:x]  // 苹方-简 极细体
+#define kFontHeavy(x)                          [UIFont fontWithName:@"PingFangSC-Heavy" size:x]
+#define kFontHelvetica(x)                      [UIFont fontWithName:@"Helvetica" size:x]
+#define kFontRegular(x)                        [UIFont fontWithName:@"PingFangSC-Regular" size:x]     // 苹方-简 常规体
+#define kFontThin(x)                           [UIFont fontWithName:@"PingFangSC-Thin" size:x]        // 苹方-简 纤细体
+#define kFontMedium(x)                         [UIFont fontWithName:@"PingFangSC-Medium" size:x]      // 苹方-简 中黑体
+#define kFontSemibold(x)                       [UIFont fontWithName:@"PingFangSC-Semibold" size:x]    // 苹方-简 中粗体
+
+
 
 
 #import "OCDataModel.h"

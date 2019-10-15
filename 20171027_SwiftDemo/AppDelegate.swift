@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let vc = ViewController();
         
-        let nav = UINavigationController();
+        let nav = MyNavigationController();
         nav.addChildViewController(vc);
         
         self.window = UIWindow();

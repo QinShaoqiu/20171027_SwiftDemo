@@ -42,7 +42,7 @@
     
     [self getData];
     
-    _optionTableView = [[UITableView alloc] initWithFrame:(CGRect){0, 64, KWidth, KHeight - 64}];
+    _optionTableView = [[UITableView alloc] initWithFrame:(CGRect){0, NavHeight, KWidth, KHeight - 64}];
     _optionTableView.backgroundColor = [UIColor whiteColor];
     _optionTableView.delegate = self;
     _optionTableView.dataSource = self;

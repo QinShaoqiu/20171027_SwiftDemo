@@ -1,0 +1,6 @@
+module Pods_20171027_SwiftDemo {
+  umbrella header "Pods-20171027_SwiftDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

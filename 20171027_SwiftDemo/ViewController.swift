@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     var backBtn: UIButton?
     var myTableView:UITableView? = nil
@@ -32,10 +34,6 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         // 隐藏系统导航栏
         //self.navigationController?.navigationBar.isHidden = true;
         
-        // 修改导航栏背景色
-        self.navigationController?.navigationBar.barTintColor = kBarTintColor
-        //UIColor(red: 55/255, green: 186/255, blue: 89/255, alpha: 1)
-        
         // 修改导航栏文字颜色
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
@@ -55,7 +53,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     // MARK: - 创建界面
     // 初始化tableview
     func initView() {
-        self.dataArray = ["第0行","第1行","第2行","OC","第4行"]
+        self.dataArray = ["UI ADD init","Swift class","UI ADD do not init", "OC", "UITableView","SnapKit"]
         
         self.myTableView = UITableView(frame:CGRect(x:0, y:0, width:self.view.frame.size.width, height:self.view.frame.size.height - 10), style:UITableViewStyle.plain)
         self.myTableView!.delegate = self
@@ -103,6 +101,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         switch indexPath.row {
         
         case 0:
+            
+            // 传值
             let vc = SwiftUIViewController()
             vc.initNum1 = "1000"
             vc.initNum2 = "2000"
@@ -113,6 +113,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             self.navigationController?.pushViewController(vc , animated: true)
             
         case 2:
+            
+            // 未传值
             let vc = SwiftUIViewController()
             self.navigationController?.pushViewController(vc , animated: true)
             
@@ -123,6 +125,11 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             
         case 4:
             let vc = SwiftViewController3()
+            self.navigationController?.pushViewController(vc , animated: true)
+            break
+            
+        case 5:
+            let vc = SnapKitDemoViewController()
             self.navigationController?.pushViewController(vc , animated: true)
             break
             

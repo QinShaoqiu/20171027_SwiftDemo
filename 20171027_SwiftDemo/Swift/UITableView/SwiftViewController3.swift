@@ -29,13 +29,20 @@ class SwiftViewController3: UIViewController ,UITableViewDelegate,UITableViewDat
         self.title = "SwiftViewController3"
         
         // 修改导航栏背景色
-        self.navigationController?.navigationBar.barTintColor = kBarTintColor
+        self.navigationController?.navigationBar.barTintColor = UIColorFromRGB(color_vaule: 0x770000, alpha: 1)
+        //UIColor(red: 55/255, green: 186/255, blue: 89/255, alpha: 1)
+        
 
         // 修改导航栏文字颜色
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         // 修改导航栏按钮颜色
         self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = kBarTintColor
     }
     
     // MARK: - 创建界面
